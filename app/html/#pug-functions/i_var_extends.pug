@@ -1,0 +1,24 @@
+extend includes/variables.pug
+
+//- Only named blocks and mixins can appear at the top level of an extending template
+//- Это значит что после екстенда могут вноситься только правки в именованные блоки и миксины, но не строиться новая структура. PUG ничего не поймет!
+
+//- BAD! :
+//- doctype html
+//- html(lang= lang)
+//-   head
+//-     meta(charset= charset)
+//-     meta(http-equiv="X-UA-Compatible", content="IE=edge")
+//-     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-     title site + page
+//-     script(src= fajs)
+//-     link(rel="stylesheet", href= css_1)
+//-     link(rel="stylesheet", href= css_2)
+//-   body
+  
+
+//- GOOD! Только желательно вносить изменеи с экстендом на структурированную страницу, ибо сейчас файл /html пуст 
+
+append var_head
+  - css_2 = 'to-ni-to'
+  - let css_4 = '+to-ni-to'

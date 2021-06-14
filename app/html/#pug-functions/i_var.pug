@@ -1,0 +1,16 @@
+//- Методы экспорта перменных
+//- include  ЕСЛИ НУЖНО ВЫЗВАТЬ ВСЕ ПЕРЕМЕННЫЕ  
+//- include includes/variables.pug  I
+//- повторить код из файла variables.pug (2 варианта)  II
+//- - let lang = 'ru'
+//- - let charset = 'UTF-8'
+//- - let site = 'Правда | '
+//- - let page = 'Главная'
+//- - let fajs = 'https://use.fontawesome.com/334cc69bb9.js'
+//- - let css_1 = 'css/styles.css'
+//- - let css_2 = 'css/media.css'
+//- append var_head  III
+  - css_2 = 'css/fonts.css'
+//- и даже вызов страницы не нужен (!?); командa APPEND || PREPEND  || AFTER  || BEFORE  = но указать! кокретный измнения
+block var_head
+

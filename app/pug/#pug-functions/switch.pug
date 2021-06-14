@@ -1,0 +1,47 @@
+//- С изменением заданного значения переменной изменяется содержание
+- let friends = 0
+case friends
+  when 0
+    p you have no friends
+  when 1
+    p you have a friend
+  default
+    p you have #{friends} friends
+//- Как это использовать?
+
+//- statusOrder => Pending || In_tranzit || Complete
+- let statusOrder = ''  //- переменная co значением из input из input
+case statusOrder
+  when 'pending'
+    p Ваш заказ находится в обработке
+  when 'in_tranzit'
+    p Ваш заказ находится в пути
+  when 'completed'
+    p Ваш заказ собран и ожидает отправки
+  default
+    p Извините! Заказ не найден
+
+//- Можно попробовать на материале строк в хедере
+
+//- как и в js можно пропускать значения
+case friends
+  when 0
+  when 1
+    p you have very few friends
+  default
+    p you have #{friends} friends
+
+//- для прерывания условия стоит использовать break
+case friends
+  when 0
+    - break
+  when 1
+    p you have very few friends
+  default
+    p you have #{friends} friends
+
+//- запись в 1 строку
+case friends
+  when 0: p you have no friends
+  when 1: p you have a friend
+  default: p you have #{friends} friends

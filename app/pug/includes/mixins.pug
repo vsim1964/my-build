@@ -1,0 +1,36 @@
+mixin links
+	link(rel="stylesheet", href="main.css")
+
+mixin logo
+	nav.main-logo-nav
+		|
+		|
+		a(href="#", class="logo-link")
+			img(src="img/.*", alt="Логотип", width="", height="", class="logo-img")
+
+mixin nav
+	nav.main-header-nav
+		ul.site-navigation
+			each val in [1, 2, 3, 4, 5]
+				li.site-navigation-item
+					a(href="#").site-navigation-link=val
+
+mixin logo-nav
+	nav.main-header-nav
+		|
+		|
+		a(href="#", class="logo-link")
+			img(src="img/.*", alt="Логотип", width="", height="", class="logo-img")
+		ul.site-navigation
+			each val in [1, 2, 3, 4, 5]
+				li.site-navigation-item
+					a(href="#").site-navigation-link=val
+
+mixin contacts
+	nav.main-header-contacts
+		address.postal-navigation
+		form(action="#")
+			button
+
+//- mixin user
+//- mixin networks
